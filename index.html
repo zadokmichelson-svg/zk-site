@@ -8,7 +8,9 @@
 <link rel="canonical" href="https://zkdetailers.com/">
 <meta property="og:type" content="website">
 <meta property="og:title" content="ZK Detailers | Mobile Auto Detailing, Big Island">
-<meta property="og:description" content="Showroom results brought to your driveway. Packages from $250. Get an instant quote.">
+<!-- DEAL START -->
+<meta property="og:description" content="BLACK FRIDAY SPECIAL: $50 off every detail + 50% off your 2nd add-on. Book by Fri, Nov 27. Mobile detailing on the Big Island.">
+<!-- DEAL END -->
 <meta property="og:url" content="https://zkdetailers.com/">
 <script type="application/ld+json">
 {
@@ -339,8 +341,94 @@
     margin-bottom: 24px;
   }
 </style>
+<!-- DEAL START -->
+<style>
+  /* ===== BLACK FRIDAY DEAL ===== */
+  .deal-bar {
+    display: block; background: var(--accent); color: var(--on-accent); text-decoration: none;
+    text-align: center; font-weight: 800; font-size: 0.85rem; letter-spacing: 1px;
+    padding: 9px 16px; line-height: 1.35;
+  }
+  .deal-bar b { white-space: nowrap; font-variant-numeric: tabular-nums; }
+  .deal-bar .bar-go { white-space: nowrap; text-decoration: underline; }
+  @media (max-width: 600px) { .deal-bar .bar-extra { display: none; } .deal-bar { font-size: 0.78rem; } }
+
+  .hero-deal {
+    display: inline-block; margin: 18px 0 0; padding: 8px 16px; border-radius: 30px;
+    background: var(--accent); color: var(--on-accent); font-weight: 800; letter-spacing: 1px; font-size: 0.85rem;
+    opacity: 0; animation: rise 0.9s 0.45s ease-out forwards;
+  }
+  @media (prefers-reduced-motion: reduce) { .hero-deal { opacity: 1; animation: none; } }
+  s.was { color: var(--muted); font-weight: 400; margin-right: 6px; text-decoration-thickness: 2px; text-decoration-color: var(--accent); }
+
+  .deal {
+    position: relative; overflow: hidden; text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(212, 175, 55, 0.18), transparent 65%),
+      var(--card);
+    border: 2px solid var(--accent); border-radius: 16px; padding: 34px 20px 28px;
+  }
+  .deal-eyebrow { color: var(--accent); font-weight: 800; font-size: 0.8rem; letter-spacing: 3px; }
+  .deal h2 {
+    font-size: clamp(2.1rem, 8vw, 3.6rem); font-weight: 900; letter-spacing: 3px; line-height: 1.05; margin: 10px 0 8px;
+    background: linear-gradient(100deg, #b8902a 0%, #f5d877 40%, #fff6d6 50%, #f5d877 60%, #b8902a 100%);
+    background-size: 250% 100%; -webkit-background-clip: text; background-clip: text; color: transparent;
+    animation: shine 4s ease-in-out infinite;
+  }
+  @media (prefers-reduced-motion: reduce) { .deal h2 { animation: none; } }
+  .deal-lead { color: var(--muted); max-width: 560px; margin: 0 auto 22px; font-size: 1.05rem; }
+  .deal-lead strong { color: var(--text); }
+
+  .clock { display: flex; justify-content: center; gap: 10px; margin: 0 auto 8px; }
+  .clock div {
+    background: var(--bg); border: 1px solid var(--line); border-radius: 10px;
+    width: 76px; padding: 10px 0 8px;
+  }
+  .clock strong { display: block; font-size: 2rem; font-weight: 900; color: var(--accent); font-variant-numeric: tabular-nums; line-height: 1.1; }
+  .clock span { font-size: 0.7rem; letter-spacing: 2px; color: var(--muted); font-weight: 700; }
+  @media (max-width: 400px) { .clock { gap: 6px; } .clock div { width: 64px; } .clock strong { font-size: 1.6rem; } }
+  .clock-end { color: var(--muted); font-size: 0.85rem; margin-bottom: 24px; }
+
+  .offers { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 14px; max-width: 680px; margin: 0 auto 22px; }
+  .offer { background: var(--bg); border: 1px solid var(--line); border-radius: 12px; padding: 20px 16px; }
+  .offer-big { font-size: 2.6rem; font-weight: 900; color: var(--accent); line-height: 1; letter-spacing: 1px; }
+  .offer-what { font-weight: 800; letter-spacing: 1px; margin: 6px 0; }
+  .offer p { margin: 0; color: var(--muted); font-size: 0.92rem; }
+  .offer p strong { color: var(--text); }
+
+  .deal-urgent { max-width: 600px; margin: 0 auto 18px; font-size: 0.98rem; }
+  .deal-urgent strong { color: var(--accent); }
+  .deal-fine { color: var(--muted); font-size: 0.8rem; margin: 14px auto 0; max-width: 600px; }
+  .deal-fine a { color: var(--muted); }
+
+  .deal-tag {
+    text-align: center; background: var(--accent); color: var(--on-accent); font-weight: 800;
+    font-size: 0.75rem; letter-spacing: 1px; border-radius: 6px; padding: 4px 8px; margin-bottom: 6px;
+  }
+  .addon-deal {
+    margin: 0 0 18px; padding: 14px 16px; border-radius: 10px; text-align: center;
+    background: rgba(212, 175, 55, 0.08); border: 1px dashed var(--accent);
+  }
+  .addon-deal strong { color: var(--accent); }
+  .calc-deal {
+    margin-top: 16px; padding: 10px 12px; border-radius: 8px; font-size: 0.88rem; text-align: center;
+    background: rgba(212, 175, 55, 0.08); border: 1px dashed var(--accent);
+  }
+  .calc-deal strong { color: var(--accent); }
+  .deal-hint { color: var(--accent); font-size: 0.85rem; text-align: center; margin-top: 8px; min-height: 1.2em; }
+  .deal-was { color: var(--muted); font-size: 0.95rem; }
+  .deal-save { color: var(--accent); font-weight: 800; font-size: 0.95rem; }
+
+  /* After the deadline the script adds .deal-over and all deal pieces disappear */
+  .deal-over .deal-only { display: none !important; }
+</style>
+<!-- DEAL END -->
 </head>
 <body id="home">
+
+<!-- DEAL START -->
+<a class="deal-bar deal-only" href="#deal">⚡ BLACK FRIDAY: $50 OFF EVERY DETAIL<span class="bar-extra"> + 50% OFF 2ND ADD-ON</span> · ENDS IN <b class="cd-short">--</b> · <span class="bar-go">CLAIM IT</span></a>
+<!-- DEAL END -->
 
 <!-- ================= NAVIGATION ================= -->
 <nav class="nav">
@@ -365,12 +453,15 @@
   <div class="hero-inner">
     <div class="eyebrow">MOBILE AUTO DETAILING • BIG ISLAND, HAWAIʻI</div>
     <h1>ZK DETAILERS</h1>
+    <!-- DEAL START -->
+    <div class="hero-deal deal-only">⚡ BLACK FRIDAY SPECIAL · $50 OFF EVERY DETAIL</div>
+    <!-- DEAL END -->
     <p class="lead">Showroom results, brought <strong>straight to your driveway</strong>. Interior and exterior detailing for cars, trucks, and work vans anywhere on the Big Island.</p>
     <div class="hero-ctas">
       <a class="btn" href="#quote">Get My Quote</a>
       <a class="btn outline" href="#packages">See Packages</a>
     </div>
-    <div class="hero-price">Details starting at <strong>$250</strong> • Call or text <a href="tel:8084303893" style="color:var(--accent);text-decoration:none;font-weight:700">(808) 430-3893</a></div>
+    <div class="hero-price">Details starting at <!-- DEAL START --><strong data-normal="$250"><s class="was">$250</s>$200</strong><!-- DEAL END --> • Call or text <a href="tel:8084303893" style="color:var(--accent);text-decoration:none;font-weight:700">(808) 430-3893</a></div>
     <div class="trust">
       <span>Fully Mobile</span>
       <span>Locally Owned</span>
@@ -380,6 +471,43 @@
   </div>
   <a class="scroll-cue" href="#packages" aria-label="Scroll to packages">⌄</a>
 </header>
+
+<!-- DEAL START -->
+<!-- ================= BLACK FRIDAY DEAL ================= -->
+<section id="deal" class="deal-only">
+  <div class="deal">
+    <div class="deal-eyebrow">LIMITED TIME · ENDS BLACK FRIDAY</div>
+    <h2>BLACK FRIDAY SPECIAL</h2>
+    <p class="deal-lead">Our Black Friday price on <strong>every detail, every vehicle</strong>. Book before the clock hits zero to lock it in.</p>
+
+    <div class="clock" aria-label="Time left in the Black Friday deal">
+      <div><strong class="cd-d">--</strong><span>DAYS</span></div>
+      <div><strong class="cd-h">--</strong><span>HRS</span></div>
+      <div><strong class="cd-m">--</strong><span>MIN</span></div>
+      <div><strong class="cd-s">--</strong><span>SEC</span></div>
+    </div>
+    <div class="clock-end">Ends Friday, Nov 27 at 11:59 PM Hawaiʻi time</div>
+
+    <div class="offers">
+      <div class="offer">
+        <div class="offer-big">$50 OFF</div>
+        <div class="offer-what">EVERY DETAIL</div>
+        <p>Basic, Gold, or Premium, on any vehicle. Details from <strong><s class="was">$250</s>$200</strong>.</p>
+      </div>
+      <div class="offer">
+        <div class="offer-big">50% OFF</div>
+        <div class="offer-what">YOUR 2ND ADD-ON</div>
+        <p>Pick 2 or more add-ons and the <strong>lower-priced one is half off</strong>.</p>
+      </div>
+    </div>
+
+    <p class="deal-urgent">Book by <strong>11:59 PM on Black Friday</strong> and you keep the deal price, even if your detail is scheduled later. <strong>When the countdown ends, prices go back up.</strong></p>
+    <a class="btn" href="#quote">Lock In My Black Friday Price</a>
+    <a class="btn outline" href="#packages">See Deal Prices</a>
+    <p class="deal-fine">One deal per vehicle. Does not apply to the Monthly Maintenance Plan or Additional Fees. Can't be combined with other offers. <a href="terms.html#deal">Full deal terms</a></p>
+  </div>
+</section>
+<!-- DEAL END -->
 
 <!-- ================= PACKAGES ================= -->
 <section id="packages">
@@ -407,12 +535,15 @@
         <li>Hand dried with microfiber towels</li>
         <li>Exterior windows and mirrors cleaned</li>
       </ul>
+      <!-- DEAL START -->
       <div class="pkg-prices">
-        <div><span>Small Car</span><strong>$250</strong></div>
-        <div><span>Sedan</span><strong>$275</strong></div>
-        <div><span>SUV / Truck</span><strong>$280</strong></div>
-        <div><span>Van / Work Van</span><strong>$325</strong></div>
+        <div class="deal-tag deal-only">BLACK FRIDAY PRICE · $50 OFF</div>
+        <div><span>Small Car</span><strong data-normal="$250"><s class="was">$250</s>$200</strong></div>
+        <div><span>Sedan</span><strong data-normal="$275"><s class="was">$275</s>$225</strong></div>
+        <div><span>SUV / Truck</span><strong data-normal="$280"><s class="was">$280</s>$230</strong></div>
+        <div><span>Van / Work Van</span><strong data-normal="$325"><s class="was">$325</s>$275</strong></div>
       </div>
+      <!-- DEAL END -->
     </div>
 
     <div class="pkg popular">
@@ -440,12 +571,15 @@
         <li>Light bug and tar removal</li>
         <li>Spray wax for shine and protection</li>
       </ul>
+      <!-- DEAL START -->
       <div class="pkg-prices">
-        <div><span>Small Car</span><strong>$275</strong></div>
-        <div><span>Sedan</span><strong>$300</strong></div>
-        <div><span>SUV / Truck</span><strong>$315</strong></div>
-        <div><span>Van / Work Van</span><strong>$350</strong></div>
+        <div class="deal-tag deal-only">BLACK FRIDAY PRICE · $50 OFF</div>
+        <div><span>Small Car</span><strong data-normal="$275"><s class="was">$275</s>$225</strong></div>
+        <div><span>Sedan</span><strong data-normal="$300"><s class="was">$300</s>$250</strong></div>
+        <div><span>SUV / Truck</span><strong data-normal="$315"><s class="was">$315</s>$265</strong></div>
+        <div><span>Van / Work Van</span><strong data-normal="$350"><s class="was">$350</s>$300</strong></div>
       </div>
+      <!-- DEAL END -->
     </div>
 
     <div class="pkg">
@@ -476,12 +610,15 @@
         <p>Keep that showroom finish. After your Premium detail, we come back once a month for a Basic maintenance detail.</p>
         <div class="plan-price"><strong>$150</strong> / month</div>
       </div>
+      <!-- DEAL START -->
       <div class="pkg-prices">
-        <div><span>Small Car</span><strong>$300</strong></div>
-        <div><span>Sedan</span><strong>$325</strong></div>
-        <div><span>SUV / Truck</span><strong>$375</strong></div>
-        <div><span>Van / Work Van</span><strong>$400</strong></div>
+        <div class="deal-tag deal-only">BLACK FRIDAY PRICE · $50 OFF</div>
+        <div><span>Small Car</span><strong data-normal="$300"><s class="was">$300</s>$250</strong></div>
+        <div><span>Sedan</span><strong data-normal="$325"><s class="was">$325</s>$275</strong></div>
+        <div><span>SUV / Truck</span><strong data-normal="$375"><s class="was">$375</s>$325</strong></div>
+        <div><span>Van / Work Van</span><strong data-normal="$400"><s class="was">$400</s>$350</strong></div>
       </div>
+      <!-- DEAL END -->
     </div>
   </div>
 </section>
@@ -490,6 +627,9 @@
 <section id="addons">
   <h2>ADD-ONS</h2>
   <p class="sub">Enhance your detail with these premium upgrades</p>
+  <!-- DEAL START -->
+  <div class="addon-deal deal-only"><strong>⚡ BLACK FRIDAY:</strong> pick 2 or more add-ons and the <strong>lower-priced one is 50% off</strong>. Book by Nov 27.</div>
+  <!-- DEAL END -->
 
   <div class="addon-grid">
     <div class="addon"><h4>Leather Clean &amp; Condition</h4><div class="price">$15 / seat</div></div>
@@ -643,9 +783,15 @@
       <label><span><input type="checkbox" value="150"> Clay Bar + Exterior Rub Wax</span><span>from $150</span></label>
     </div>
 
+    <!-- DEAL START -->
+    <div class="calc-deal deal-only"><strong>⚡ Black Friday pricing applied:</strong> $50 off your detail, plus 50% off your lower-priced add-on when you pick 2 or more.</div>
+    <div class="deal-hint deal-only" id="dealHint"></div>
+    <!-- DEAL END -->
     <div class="total">
       <div>Estimated Total</div>
+      <!-- DEAL START --><div class="deal-was deal-only" id="dealWas"></div><!-- DEAL END -->
       <div class="amount" id="total">$250</div>
+      <!-- DEAL START --><div class="deal-save deal-only" id="dealSave"></div><!-- DEAL END -->
     </div>
     <label class="agree"><input type="checkbox" id="agreeTerms"> I have read and agree to the ZK Detailers <a href="terms.html" target="_blank">Terms of Service</a> and <a href="privacy.html" target="_blank">Privacy Policy</a>.</label>
     <button class="btn send" id="sendQuote" type="button">💬 Text My Quote to ZK Detailers</button>
@@ -794,11 +940,86 @@
       "Package: " + pick("pkg") + "\n" +
       "Add-ons: " + (addons.length ? addons.join(", ") : "None") + "\n" +
       "Seats: " + val("seats") + "\n" +
-      "Estimate: " + document.getElementById("total").textContent;
+      "Estimate: " + document.getElementById("total").textContent
+      // DEAL START
+      + (window.zkDealText ? window.zkDealText() : "")
+      // DEAL END
+      ;
 
     window.location.href = "sms:8084303893?body=" + encodeURIComponent(msg);
   });
 </script>
+<!-- DEAL START -->
+<script>
+  // ===== BLACK FRIDAY DEAL =====
+  // Deal: $50 off every detail + 50% off the lower-priced add-on when 2 or more are picked.
+  // Ends Friday Nov 27, 2026 at 11:59:59 PM Hawaii time. After that the page goes back to normal prices by itself.
+  (function () {
+    const DEAL_END = new Date("2026-11-27T23:59:59-10:00").getTime();
+    const DETAIL_OFF = 50;
+    const root = document.documentElement;
+    const money = n => "$" + (Number.isInteger(n) ? n : n.toFixed(2));
+    const live = () => Date.now() <= DEAL_END;
+
+    // Works out the deal for whatever is picked in the calculator
+    function dealQuote() {
+      const v = document.getElementById("vehicle").value;
+      const p = document.getElementById("pkg").value;
+      const seats = Number(document.getElementById("seats").value);
+      const detail = prices[p][v];
+      const addons = [...document.querySelectorAll(".checks input:checked")].map(box =>
+        box.hasAttribute("data-perseat") ? Number(box.value) * seats : Number(box.value));
+      const addonSum = addons.reduce((a, b) => a + b, 0);
+      const addonOff = addons.length >= 2 ? Math.min(...addons) / 2 : 0;
+      const regular = detail + addonSum;
+      const save = DETAIL_OFF + addonOff;
+      return { regular, save, total: regular - save, addonOff, count: addons.length };
+    }
+
+    function dealTotal() {
+      if (!live()) return;            // after the deadline the normal calculator total stays
+      const q = dealQuote();
+      document.getElementById("total").textContent = money(q.total);
+      document.getElementById("dealWas").innerHTML = 'Regular price <s class="was">' + money(q.regular) + "</s>";
+      document.getElementById("dealSave").textContent = "You save " + money(q.save) + " with Black Friday pricing";
+      document.getElementById("dealHint").textContent = q.count === 1
+        ? "Add one more add-on and the lower-priced one is 50% off."
+        : (q.count >= 2 ? "50% off add-on applied: you save " + money(q.addonOff) + "." : "");
+    }
+
+    // Adds the deal to the text message the customer sends
+    window.zkDealText = function () {
+      if (!live()) return "";
+      const q = dealQuote();
+      return "\nBlack Friday Special: $50 off detail" + (q.addonOff ? " + 50% off 2nd add-on" : "") +
+             " (regular " + money(q.regular) + ", save " + money(q.save) + ")";
+    };
+
+    // Puts every slashed price back to its normal price and hides the deal pieces
+    function endDeal() {
+      root.classList.add("deal-over");
+      document.querySelectorAll("[data-normal]").forEach(el => { el.textContent = el.getAttribute("data-normal"); });
+      if (typeof updateTotal === "function") updateTotal();
+    }
+
+    const two = n => String(n).padStart(2, "0");
+    function tick() {
+      const left = DEAL_END - Date.now();
+      if (left < 0) { endDeal(); clearInterval(timer); return; }
+      const d = Math.floor(left / 86400000), h = Math.floor(left / 3600000) % 24,
+            m = Math.floor(left / 60000) % 60, s = Math.floor(left / 1000) % 60;
+      const set = (sel, val) => document.querySelectorAll(sel).forEach(el => el.textContent = val);
+      set(".cd-d", d); set(".cd-h", two(h)); set(".cd-m", two(m)); set(".cd-s", two(s));
+      set(".cd-short", d + "d " + two(h) + "h " + two(m) + "m " + two(s) + "s");
+    }
+
+    document.querySelectorAll("#vehicle, #pkg, #seats, .checks input").forEach(el => el.addEventListener("change", dealTotal));
+    const timer = setInterval(tick, 1000);
+    tick();
+    dealTotal();
+  })();
+</script>
+<!-- DEAL END -->
 
 </body>
 </html>
